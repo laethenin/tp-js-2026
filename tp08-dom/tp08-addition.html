@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire une addition</title>
+    <script src = "tp08-addition.js" defer></script>   
+</head>
+
+<body>
+    <header>
+        <h1>Additionner deux nombres</h1>
+    </header>
+
+    <div>
+        <label for = "nombre1" >Veuillez saisir un premier nombre : </label>
+        <input type = "text" id = "nombre1" name = "nombre1">
+        <br><br>
+
+        <label for = "nombre2">Veuillez saisir un deuxième nombre : </label>
+        <input type = "text" id = "nombre2" name = "nombre2">
+        <br><br>
+
+        <button type ="button" onclick = "additionner()">Additionner</button>
+        <br><br>
+
+        <span id="resultat"></span>
+        <div id = "error" style = "background-color: red;"></div>
+    </div>
+</body>
+</html>
