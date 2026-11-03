@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Affichage pays et capitales</title>
+    <script src="tp09-affichagePaysEtCapitaleListe.js"></script>
+</head>
+
+<body onload="afficherPays()">
+
+    <h1>Liste des pays avec leur capitale</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Pays <span onclick="trierPays()">↕</span></th>
+                <th>Capitale</th>
+            </tr>
+        </thead>
+
+        <tbody id="resultat"></tbody>
+    </table>
+
+</body>
+</html>
