@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire création d'un utilisateur</title>
+
+    <script src="tp10-formulaire.js" defer></script>
+    <script src="modale-view.js"></script>
+
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gestion des utilisateurs</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissance</th>
+                <th>Lieu de naissance</th>
+                <th>Adresse</th>
+                <th>Suppression</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+    </table>
+
+    <button type="button" onclick="openModale('modale1')">+ Ajouter</button>
+
+    <modale-view id="modale1" modale-width="20%">
+        <div slot="title" header-color="#dc3545">Créer un utilisateur</div>
+
+        <div slot="body">
+            <form>
+                <input type="hidden" name="idCreateur" value="Laetitia">
+
+                <label for="nom">Nom : </label>
+                <input type="text" id="nom" name="nom">
+                <br><br>
+
+                <label for="prenom">Prénom : </label>
+                <input type="text" id="prenom" name="prenom">
+                <br><br>
+
+                <label for="genre">Genre : </label>
+                <input type="text" id="genre" name="genre">
+                <br><br>
+
+                <label for="dateNaissance">Date de naissance : </label>
+                <input type="date" id="dateNaissance" name="dateNaissance">
+                <br><br>
+
+                <label for="lieuNaissance">Lieu de naissance : </label>
+                <input type="text" id="lieuNaissance" name="lieuNaissance">
+                <br><br>
+
+                <label for="departementNaissance">Département de naissance : </label>
+                <select id="departementNaissance" name="departementNaissance">
+                    <option value="22">Côtes d'Armor</option>
+                    <option value="29">Finistère</option>
+                    <option value="35">Ile-et-Vilaine</option>
+                    <option value="56">Morbihan</option>
+                </select>
+                <br><br>
+
+                <fieldset>
+                    <legend>Complétez votre adresse</legend>
+
+                    <label for="numeroRue">Numéro de rue : </label>
+                    <input type="text" id="numeroRue" name="numeroRue">
+                    <br>
+
+                    <label for="libelleRue">Libellé de la rue : </label>
+                    <input type="text" id="libelleRue" name="libelleRue">
+                    <br>
+
+                    <label for="codePostal">Code postal : </label>
+                    <input type="text" id="codePostal" name="codePostal">
+                    <br>
+
+                    <label for="ville">Ville : </label>
+                    <input type="text" id="ville" name="ville">
+                    <br>
+                </fieldset>
+
+                <br>
+            </form>
+        </div>
+
+        <div slot="footer">
+            <input type="button" value="Annuler" onclick="closeModale('modale1')">
+            <input type="button" value="Valider" onclick="creerUtilisateur()">
+        </div>
+    </modale-view>
+
+</body>
+</html>

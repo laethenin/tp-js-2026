@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollueurs-filtrage</title>
+    <script src="tp10-filtrage-pollueurs.js" defer></script>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+        #erreur {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titre"></h1>
+    <h2 id="annee"></h2>
+
+    <label for="min">Minimum</label>
+    <input type="number" id="min" name="min">
+
+    <label for="max">Maximum</label>
+    <input type="number" id="max" name="max">
+
+    <button type="submit" onclick="filtrer()">Valider</button>
+    <br>
+    <span id="erreur"></span>
+    <br><br> 
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Valeur</th>
+                <th>%</th>
+            </tr>
+        </thead>
+        
+        <tbody id="corps">
+        </tbody>
+    </table>
+</body>
+
+</html>
